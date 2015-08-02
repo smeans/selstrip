@@ -1,0 +1,49 @@
+.selstrip {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    padding: 5px;
+}
+
+.selstrip>* {
+    display: inline-block;
+    padding: 2pt;
+    background-color: #eee;
+    border: 1px solid white;
+}
+
+.selstrip-x>* {
+    display: inline-block;
+    padding: 2pt;
+    background-color: #eee;
+    border: 1px solid white;
+}
+
+.selstrip.ss-readonly>*:not(.ss-sel) {
+  display: none;
+}
+
+.selstrip.ss-readonly>*.ss-sel {
+  border: 1px solid black;
+}
+
+
+.ss-sel {
+    background-color: #BFF3FF;
+}
+
+.ss-sel-x {
+    background-color: #BFF3FF;
+}
+
+.ss-sel-track {
+    background-color: #BFF3FF !important;
+}
+
+.ss-desel-track {
+    background-color: #eee !important;
+}
