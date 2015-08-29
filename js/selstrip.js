@@ -40,18 +40,18 @@
         if (confirmed) {
             $('.ss-desel-track', ss).removeClass('ss-sel');
             $('.ss-sel-track', ss).addClass('ss-sel');
+
+            $(ss).trigger('change');
         }
 
         $(ss).children().removeClass('ss-sel-track').removeClass('ss-desel-track');
-
-        $(ss).trigger('change');
     }
 
     function mousedown(event) {
-        if ($(this).hasClass('ss-readonly')) {
+        if ($(this).hasClass('ss-readonly') || event.target == this) {
           return;
         }
-        
+
         var data = $(this).data('selStrip');
 
         data.sel_anchor = event.target;
